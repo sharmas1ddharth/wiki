@@ -1,0 +1,22 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+	{% block title %}
+		{{ entryTitle }} not found!
+	{% endblock %}
+
+
+{% block body %}
+
+	<div id="notfound">
+		<div class="notfound">
+			<div class="notfound-404">
+				<h1></h1>
+			</div>
+			<h2>{{ entryTitle }} ?</h2>
+			<p>The page you are looking for is not yet created.</p>
+			<a href="{% url 'newEntry' %}">Create Now</a>
+		</div>
+	</div>
+
+{% endblock %}
